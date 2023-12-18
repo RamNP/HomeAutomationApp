@@ -98,7 +98,7 @@ class HomeControlActivity : ComponentActivity() {
             Spacer(modifier = Modifier.height(100.dp))
             Column(modifier = Modifier.fillMaxSize()) {
                 Row() {
-                    Text(text = "First Floor", color = Color.White)
+                    Text(text = "First Floor", color = Color.Black , fontSize = 24.sp)
                 }
                 Row(modifier = Modifier.fillMaxWidth()) {
                     Card(
@@ -116,7 +116,7 @@ class HomeControlActivity : ComponentActivity() {
 
                         )
                         ControlButton(
-                            text = "Send data K",
+                            text = "Kitchen Light",
                             data = "K",
                             modifier = Modifier
 
@@ -140,7 +140,7 @@ class HomeControlActivity : ComponentActivity() {
 
                         )
                         ControlButton(
-                            text = "Send data Hall",
+                            text = "Hall light",
                             data = "H",
                             modifier = Modifier
 
@@ -155,7 +155,7 @@ class HomeControlActivity : ComponentActivity() {
                         .fillMaxWidth()
                         .padding(top = 10.dp)
                 ) {
-                    Text(text = "Second Floor", color = Color.White)
+                    Text(text = "Second Floor", color = Color.Black , fontSize = 24.sp)
                 }
                 Column(
                     modifier = Modifier
@@ -170,7 +170,6 @@ class HomeControlActivity : ComponentActivity() {
                         colors = CardDefaults.cardColors(Color.White)
 
                     ) {
-                        Text(text = "Second floor", Modifier.padding(start = 50.dp))
                         Row(modifier = Modifier.fillMaxWidth()) {
                             Image(
                                 painter = painterResource(id = R.drawable.ic_light),
@@ -179,9 +178,9 @@ class HomeControlActivity : ComponentActivity() {
                                     .height(100.dp)
                                     .width(100.dp)
                             )
-                            Spacer(modifier = Modifier.padding(50.dp))
+                            Spacer(modifier = Modifier.padding(30.dp))
                             ControlButton(
-                                text = "Send data Light",
+                                text = "Living room Light",
                                 data = "L",
                                 modifier = Modifier.padding(start = 100.dp)
                             )
@@ -205,7 +204,7 @@ class HomeControlActivity : ComponentActivity() {
                                 )
                                 Spacer(modifier = Modifier.padding(50.dp))
                                 ControlButton(
-                                    text = "Send data R",
+                                    text = "Room Light",
                                     data = "R",
                                     modifier = Modifier.padding(start = 100.dp)
                                 )
@@ -214,10 +213,10 @@ class HomeControlActivity : ComponentActivity() {
                             //card2
                             Card(
                                 modifier = Modifier
-                                    .height(200.dp)
+                                    .height(120.dp)
                                     .width(450.dp)
-                                    .padding(top = 10.dp, start = 80.dp),
-                                colors = CardDefaults.cardColors(Color.Gray)
+                                    .padding(start = 80.dp),
+                                colors = CardDefaults.cardColors(Color.White)
 
                             ) {
 
@@ -225,15 +224,16 @@ class HomeControlActivity : ComponentActivity() {
                                     .fillMaxWidth()
                                     .padding(top = 10.dp)) {
                                     Image(
-                                        painter = painterResource(id = R.drawable.ic_ac),
+                                        painter = painterResource(id = R.drawable.ic_curtain),
                                         contentDescription = null,
                                         modifier = Modifier
                                             .height(70.dp)
                                             .width(70.dp)
+                                            .padding(start = 10.dp)
                                     )
                                     Spacer(modifier = Modifier.padding(20.dp))
                                     ControlButton(
-                                        text = "Send data C",
+                                        text = "Curtain Light",
                                         data = "C",
                                         modifier = Modifier.padding(start = 30.dp)
                                     )
@@ -363,7 +363,7 @@ class HomeControlActivity : ComponentActivity() {
     @Composable
     fun ControlButton(
         text: String,
-        width: Dp = 150.dp,
+        width: Dp = 160.dp,
         data: String,
         modifier: Modifier
     ) {
