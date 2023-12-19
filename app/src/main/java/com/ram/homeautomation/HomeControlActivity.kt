@@ -95,7 +95,7 @@ class HomeControlActivity : ComponentActivity() {
                 .fillMaxSize()
                 .padding(top = 80.dp)
         ) {
-            Spacer(modifier = Modifier.height(100.dp))
+            Spacer(modifier = Modifier.height(40.dp))
             Column(modifier = Modifier.fillMaxSize()) {
                 Row() {
                     Text(text = "First Floor", color = Color.Black , fontSize = 24.sp)
@@ -112,7 +112,7 @@ class HomeControlActivity : ComponentActivity() {
                             contentDescription = null, modifier = Modifier
                                 .height(150.dp)
                                 .width(150.dp)
-                                .padding( start = 20.dp)
+                                .padding(start = 20.dp)
 
                         )
                         ControlButton(
@@ -135,7 +135,7 @@ class HomeControlActivity : ComponentActivity() {
                             contentDescription = null, modifier = Modifier
                                 .height(150.dp)
                                 .width(150.dp)
-                                .padding( start = 20.dp)
+                                .padding(start = 20.dp)
 
 
                         )
@@ -149,7 +149,7 @@ class HomeControlActivity : ComponentActivity() {
                     }
                 }
 
-//Second floor
+                     //Second floor
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -189,12 +189,14 @@ class HomeControlActivity : ComponentActivity() {
                         //card1
                         Card(
                             modifier = Modifier
-                                .height(300.dp)
+                                .height(600.dp)
                                 .width(450.dp),
                         ) {
-                            Row(modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 10.dp)) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 10.dp)
+                            ) {
                                 Image(
                                     painter = painterResource(id = R.drawable.ic_light),
                                     contentDescription = null,
@@ -211,18 +213,51 @@ class HomeControlActivity : ComponentActivity() {
                             }
 
                             //card2
-                            Card(
+                            Row(modifier = Modifier.fillMaxWidth()) {
+                                Card(
+                                    modifier = Modifier
+                                        .height(200.dp)
+                                        .width(190.dp),
+                                    colors = CardDefaults.cardColors(Color.White)
+
+                                ) {
+
+                                    Column(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                    ) {
+                                        Image(
+                                            painter = painterResource(id = R.drawable.ic_ac),
+                                            contentDescription = null,
+                                            modifier = Modifier
+                                                .height(70.dp)
+                                                .width(70.dp)
+                                                .padding(start = 10.dp)
+                                        )
+                                        Spacer(modifier = Modifier.padding(10.dp))
+                                        ControlButton(
+                                            text = "Ac Light",
+                                            data = "AC",
+                                            modifier = Modifier.padding(start = 30.dp)
+                                        )
+                                    }
+
+
+                                }
+                                Spacer(modifier = Modifier.padding(2.dp))
+
+                                Card(
                                 modifier = Modifier
-                                    .height(120.dp)
-                                    .width(450.dp)
-                                    .padding(start = 80.dp),
+                                    .height(200.dp)
+                                    .width(225.dp),
                                 colors = CardDefaults.cardColors(Color.White)
 
                             ) {
 
-                                Row(modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(top = 10.dp)) {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                ) {
                                     Image(
                                         painter = painterResource(id = R.drawable.ic_curtain),
                                         contentDescription = null,
@@ -231,7 +266,7 @@ class HomeControlActivity : ComponentActivity() {
                                             .width(70.dp)
                                             .padding(start = 10.dp)
                                     )
-                                    Spacer(modifier = Modifier.padding(20.dp))
+                                    Spacer(modifier = Modifier.padding(10.dp))
                                     ControlButton(
                                         text = "Curtain Light",
                                         data = "C",
@@ -241,7 +276,7 @@ class HomeControlActivity : ComponentActivity() {
 
 
                             }
-
+                        }
                         }
 
 

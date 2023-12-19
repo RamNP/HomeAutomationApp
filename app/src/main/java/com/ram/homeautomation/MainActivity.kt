@@ -157,7 +157,7 @@ class MainActivity : ComponentActivity() {
             modifier = Modifier
                 .fillMaxHeight(0.9f)
                 .fillMaxWidth()
-                .padding(5.dp)
+                .padding(10.dp)
         ) {
 
             Spacer(modifier = Modifier.height(10.dp))
